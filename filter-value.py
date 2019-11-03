@@ -1,6 +1,14 @@
 import csv
 import glob
 from datetime import datetime
+import os 
+
+
+newDir = os.getcwd()+"/Data"
+os.chdir(newDir) 
+cwd = os.getcwd() 
+print("Current working directory is:", cwd) 
+
 
 csvReader=csv.reader(open('formated-date.csv','r'),delimiter = ',')
 csvWriter=csv.writer(open('output.csv','w',newline=''),delimiter = ',')
