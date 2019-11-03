@@ -4,8 +4,16 @@ Simple python files to filter NSE stock price data
 ## Note: Following commands and setup is tested on windows machine. If you are using Linux or any other os please change the steps accordingly
 
 ## Pre-Requisite:
-	- Python should be installed on machine https://www.python.org/ftp/python/3.8.0/python-3.8.0.exe   
+- Python should be installed on machine https://www.python.org/ftp/python/3.8.0/python-3.8.0.exe   
 	
+## Additional Packages required for Automated Method
+- install requests python package
+- install wtforms python package
+```
+pip install requests
+pip install wtforms
+```
+
 
 ## Clone the repository
 ```
@@ -47,3 +55,15 @@ python filter-value.py
 Final Output file will be 'Data/output.csv'
 
 #### You can now check the final processed file 'Data/output.csv' 
+
+### Method 2: Automated Method
+
+1. Run python file 'automated.py' and pass the argument of date for which you want processed file in "DD MMM YYYY" (01 NOV 2019)
+```
+python automated.py DD MMM YYYY
+
+Example: python automated.py 01 NOV 2019
+```
+Above command will provide processed file as 'file/automated-output.csv' in the current working dir
+
+
