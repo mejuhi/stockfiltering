@@ -1,12 +1,13 @@
 # Stockfiltering
-Simple python files to filter NSE stock price data
+Python files to process NSE stock price data.  
+You can either use [Method 1](https://github.com/mejuhi/stockfiltering#method-1-manual-method-batch-method) (i.e. Manual Method/ Batch Method) or [Method 2](https://github.com/mejuhi/stockfiltering#method-2-automated-method) (i.e. Automated Method) for processing
 
-## Note: Following commands and setup is tested on windows machine. If you are using Linux or any other os please change the steps accordingly
+## Note: Following setup is tested on windows machine. If you are using any other os(Linux or MAC os) please change the steps accordingly
 
 ## Pre-Requisite:
 - Python should be installed on machine https://www.python.org/ftp/python/3.8.0/python-3.8.0.exe   
 	
-## Additional Packages required for Automated Method
+## Additional Packages required (only for Automated Method)
 - install requests python package
 - install wtforms python package
 ```
@@ -67,3 +68,19 @@ Example: python automated.py 01 NOV 2019
 Above command will provide processed file as 'file/automated-output.csv' in the current working dir
 
 
+### Details of the files checked in 
+```
+README.md:            (README) md file for documentation
+file:                 (AUTOMATED METHOD) Dir which stores all the data for automated method (input as well as output)
+automated.py:         (AUTOMATED METHOD) Python code for downloading and processing csv file for particular date supplied as parameter	 
+Data:                 (MANUAL METHOD) Dir which stores all the data for manual method (input as well as output)
+unzip.py:             (MANUAL METHOD) Python code for unziping all the zip files downloaded
+consolidation.py:     (MANUAL METHOD) Python code for combining n csv files of various dates and giving out single csv file
+filter-onlyEQ.py:     (MANUAL METHOD) Python code for only filtering out only Equity
+format-date.py:       (MANUAL METHOD) Python code for formating date, it adds extra column with date format as 'YYMMDD' 
+filter-value.py:      (MANUAL METHOD) Python code for only filtering out on value greater than 50000000
+trial.py:             (REVISION) Python code used for testing out automated method
+format-date-nifty.py: (REVISION) Python code to format date
+download.py:          (REVISION) Python code to download csv from NSE
+pre.md:               (TO BE DELETED)
+```
