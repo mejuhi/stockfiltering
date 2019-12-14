@@ -13,6 +13,7 @@ You can either use [Method 1](https://github.com/mejuhi/stockfiltering#method-1-
 ```
 pip install requests
 pip install wtforms
+pip install pydot
 ```
 
 
@@ -68,11 +69,28 @@ Example: python automated.py 01 NOV 2019
 Above command will provide processed file as 'file/automated-output.csv' in the current working dir
 
 
+## Run python to remove entries
+Remove entries from the excel file based on array of date(s) given by user via command line.  
+Pass the date(s) separated by comma and run the python file
+
+```
+
+python reduction.py YYMMDD
+or
+python reduction.py YYMMDD,YYMMDD
+
+Example: python reduction.py 191213,160401
+```
+
+
+
+
 ### Details of the files checked in 
 ```
 README.md:            (README) md file for documentation
 file:                 (AUTOMATED METHOD) Dir which stores all the data for automated method (input as well as output)
-automated.py:         (AUTOMATED METHOD) Python code for downloading and processing csv file for particular date supplied as parameter	 
+automated.py:         (AUTOMATED METHOD) Python code for downloading and processing csv file for particular date supplied as parameter
+reduction.py          (FILTER) Python code for converting excel to csv and then remove entries with dates supplied using command line
 Data:                 (MANUAL METHOD) Dir which stores all the data for manual method (input as well as output)
 unzip.py:             (MANUAL METHOD) Python code for unziping all the zip files downloaded
 consolidation.py:     (MANUAL METHOD) Python code for combining n csv files of various dates and giving out single csv file
