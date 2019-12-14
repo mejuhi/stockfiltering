@@ -1,0 +1,1 @@
+# Delete all the files from this folder
