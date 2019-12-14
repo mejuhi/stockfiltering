@@ -44,7 +44,7 @@ for row in csvReader:
 			dateIncsv =	removeData[0]		
 			#compareDate = date.strip()
 			if(dateIncsv in removeDates):
-				#print("Removing entry")
+				print("Removing entry")
 			else:
 				csvWriter.writerow(row)
 
